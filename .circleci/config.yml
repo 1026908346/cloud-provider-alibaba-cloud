@@ -11,12 +11,8 @@ jobs: # basic units of work in a run
 
     parallelism: 2
 
-    environment: # environment variables for the build itself
-      TEST_RESULTS: /tmp/test-results # path to where test results will be saved
-
     steps: # steps that comprise the `build` job
       - checkout # check out source code to working directory
-      - run: mkdir -p $TEST_RESULTS # create the test results directory
       - run:
           name: "Create a temp directory for artifacts"
           command: |
