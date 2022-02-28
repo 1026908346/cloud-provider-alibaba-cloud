@@ -23,6 +23,7 @@ jobs: # basic units of work in a run
             mkdir -p /tmp/artifacts
       - run:
           command: |
+              ls -l
               cd cloud-controller-manager
               go test  -coverprofile=c.out
               go tool cover -html=c.out -o coverage.html
